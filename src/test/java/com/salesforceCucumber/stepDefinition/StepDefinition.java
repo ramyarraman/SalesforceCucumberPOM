@@ -28,8 +28,7 @@ public class StepDefinition extends BaseMethods{
 	public void setUp() {
 		launchAndOpenBrowser("chrome");
 	}
-	//tags can be included in before and after to make the before to run for only those scenarios.
-	
+	//tags can be included in before and after to make the before to run for only those scenarios.	
 	@After//("@CheckRememberMe or @InValidLogin")
 	public void tearDown() {
 		driver.quit();
