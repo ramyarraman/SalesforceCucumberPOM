@@ -58,4 +58,8 @@ Scenario Outline: Login Error Message1 - To validate Login with invalid credenti
     And clicks on continue button
     Then "We’ve sent you an email with a link to finish resetting your password." password reset message is displayed
     
+    Scenario: to check how summary plugin works
+    Given user enters url "http://www.google.com"
+    When user searches "cucumber"
+    
    

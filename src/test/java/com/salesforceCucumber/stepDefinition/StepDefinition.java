@@ -1,8 +1,15 @@
 package com.salesforceCucumber.stepDefinition;
 
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import com.salesforce.homepages.HomePage;
 import com.salesforce.loginpages.ForgotPasswordPage;
@@ -12,7 +19,9 @@ import com.salesforceCucumber.base.BasePage;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,8 +39,15 @@ public class StepDefinition extends BaseMethods{
 	}
 	//tags can be included in before and after to make the before to run for only those scenarios.	
 	@After//("@CheckRememberMe or @InValidLogin")
-	public void tearDown() {
+	public void tearDown(Scenario scenario) throws IOException {
+			if(scenario.isFailed()) {
+				attachScreenshot(scenario);
+			}else {
+				captureScreenshot(scenario);
+			}
+		
 		driver.quit();
+		
 	}
 	@Given("User goes to  {string}")
 	public void user_goes_to(String url) {

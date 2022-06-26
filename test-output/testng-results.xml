@@ -1,27 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T19:36:25 CDT" name="Default suite" finished-at="2022-05-26T19:36:25 CDT" duration-ms="228">
+  <suite started-at="2022-06-24T16:59:02 CDT" name="Default suite" finished-at="2022-06-24T17:00:04 CDT" duration-ms="61932">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-05-26T19:36:25 CDT" name="Default test" finished-at="2022-05-26T19:36:25 CDT" duration-ms="228">
+    <test started-at="2022-06-24T16:59:02 CDT" name="Default test" finished-at="2022-06-24T17:00:04 CDT" duration-ms="61932">
       <class name="com.salesforceCucumber.runners.RunnerFile">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-05-26T19:36:25 CDT" name="setUpClass" finished-at="2022-05-26T19:36:25 CDT" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T16:59:02 CDT" name="setUpClass" finished-at="2022-06-24T16:59:02 CDT" duration-ms="197" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@a776e]]>
+                <![CDATA[org.testng.TestRunner@3fa7df1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-05-26T19:36:25 CDT" name="tearDownClass" finished-at="2022-05-26T19:36:25 CDT" duration-ms="20" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T16:59:02 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-24T16:59:13 CDT" duration-ms="10860" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login Error Message1 - To validate Login with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SFDC Login page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T16:59:13 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-24T16:59:24 CDT" duration-ms="10920" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login Error Message1 - To validate Login with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SFDC Login page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T16:59:24 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-24T16:59:39 CDT" duration-ms="15040" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login To SalesForce2 - Login with valid data and check for free trial message"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SFDC Login page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Welcome to your free trial should be displayed] but found [Home Page ~ Salesforce - Developer Edition]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Welcome to your free trial should be displayed] but found [Home Page ~ Salesforce - Developer Edition]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.salesforceCucumber.stepDefinition.StepDefinition.title_should_be_displayed(StepDefinition.java:124)
+at ✽."Welcome to your free trial should be displayed" title should be displayed(file:///Users/ramyabharath/eclipse-workspace/SalesforceCucumberPom/src/test/resources/Features/SDFCwithScenarioOutlineAndDataTables.feature:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T16:59:39 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-24T17:00:02 CDT" duration-ms="22463" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check RemeberMe3 - Login with valid data and remember me checked should retain username and check box selection after logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SFDC Login page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T17:00:02 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-24T17:00:04 CDT" duration-ms="2397" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["to check how summary plugin works"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SFDC Login page"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'user enters url "http://www.google.com"' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user enters url {string}")
+public void user_enters_url(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches {string}")
+public void user_searches(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'user enters url "http://www.google.com"' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("user enters url {string}")
+public void user_enters_url(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user searches {string}")
+public void user_searches(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:133)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.salesforceCucumber.runners.RunnerFile@2f7c2f4f]" started-at="2022-06-24T17:00:04 CDT" name="tearDownClass" finished-at="2022-06-24T17:00:04 CDT" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
